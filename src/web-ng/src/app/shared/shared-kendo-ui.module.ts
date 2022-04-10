@@ -5,6 +5,7 @@ import { GridModule } from '@progress/kendo-angular-grid';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { LabelModule } from "@progress/kendo-angular-label";
 import { InputsModule } from "@progress/kendo-angular-inputs";
+import { LayoutModule } from '@progress/kendo-angular-layout';
 
 let importExportModules = [
     DropDownsModule,
@@ -12,6 +13,7 @@ let importExportModules = [
     ButtonsModule,
     LabelModule,
     InputsModule,
+    LayoutModule
 ]
 
 @NgModule({

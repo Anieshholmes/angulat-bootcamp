@@ -8,24 +8,26 @@ import { AuthService } from '../../_services/auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  register_form: FormGroup | undefined;
+  registerForm: FormGroup;
   isSuccessful: boolean = false;
   isSignUpFailed: boolean = false;
   errorMessage: string = '';
 
-  constructor(private authService: AuthService) { }
-
-  ngOnInit(): void {
-    this.register_form = new FormGroup({
+  constructor(private authService: AuthService) {
+    this.registerForm = new FormGroup({
       userName: new FormControl(null, [Validators.required, Validators.minLength(3), Validators.maxLength(20)]),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, [Validators.required, Validators.minLength(8)])
-    })
+      password: new FormControl(null, [Validators.required, Validators.minLength(8)]),
+      confirmPassword: new FormControl(null, Validators.required),
+      acceptTerms: new FormControl(true, Validators.required)
+    });
   }
 
+  ngOnInit(): void { }
+
   onSubmit(): void {
-    this.authService.register(this.register_form?.value.userName,
-      this.register_form?.value.email, this.register_form?.value.password
+    this.authService.register(this.registerForm?.value.userName,
+      this.registerForm?.value.email, this.registerForm?.value.password
       ).subscribe(data => {
         console.log(data);
         this.isSuccessful = true;
@@ -35,6 +37,10 @@ export class RegisterComponent implements OnInit {
         this.errorMessage = err.error.message;
         this.isSignUpFailed = true;
       })
+  }
+
+  resetForm(): void {
+    this.registerForm.reset();
   }
 
 }
