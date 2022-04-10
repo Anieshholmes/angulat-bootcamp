@@ -8,8 +8,12 @@ import { BoardAdminComponent } from './containers/board-admin/board-admin.compon
 import { BoardModeratorComponent } from './containers/board-moderator/board-moderator.component';
 import { BoardUserComponent } from './containers/board-user/board-user.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { kendoUiModule } from './shared-kendo-ui.module';
 
 
 @NgModule({
@@ -26,8 +30,16 @@ import { HttpClientModule} from '@angular/common/http';
     CommonModule,
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+    FlexLayoutModule,
+    PerfectScrollbarModule,
+    kendoUiModule,
   ],
+  entryComponents: [RegisterComponent]
   // providers: [authInterceptorProviders]
 })
 export class SharedModule { }
