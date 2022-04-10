@@ -13,6 +13,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { kendoUiModule } from './shared-kendo-ui.module';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
     RouterModule,
     FlexLayoutModule,
     PerfectScrollbarModule,
+    kendoUiModule,
   ],
+  entryComponents: [RegisterComponent]
   // providers: [authInterceptorProviders]
 })
 export class SharedModule { }

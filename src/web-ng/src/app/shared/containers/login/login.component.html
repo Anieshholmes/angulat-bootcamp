@@ -1,1 +1,13 @@
-<p>login works!</p>
+<form [formGroup]="loginForm">
+    <div fxLayout="column" fxLayoutAlign="space-evenly center">
+        <kendo-floatinglabel text="User Name">
+            <input type="text" formControlName="userName" kendoTextBox>
+        </kendo-floatinglabel>
+        <kendo-floatinglabel text="Password">
+            <input type="password" formControlName="password" kendoTextBox>
+        </kendo-floatinglabel>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button kendoButton [disabled]="loginForm.invalid" (click)="onSubmit()">Log In</button>
+        </div>
+    </div>
+</form>
