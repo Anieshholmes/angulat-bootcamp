@@ -36,15 +36,16 @@
     "@progress/kendo-angular-notification": "^3.0.5",
     "@progress/kendo-angular-pdf-export": "^3.0.0",
     "@progress/kendo-angular-popup": "^4.0.0",
+    "@progress/kendo-angular-progressbar": "^2.0.0",
     "@progress/kendo-angular-treeview": "^6.0.0",
     "@progress/kendo-data-query": "^1.0.0",
     "@progress/kendo-drawing": "^1.5.12",
     "@progress/kendo-licensing": "^1.0.2",
-    "@progress/kendo-theme-default": "^5.0.0",
-    "ngx-perfect-scrollbar": "^10.1.1",
+    "@progress/kendo-theme-default": "^5.3.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "zone.js": "~0.11.4",
+    "zone.js": "~0.11.4"
+    "ngx-perfect-scrollbar": "^10.1.1",
     "@progress/kendo-angular-progressbar": "^2.0.0"
   },
   "devDependencies": {
